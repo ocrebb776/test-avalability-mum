@@ -19,18 +19,7 @@ let week
 let month
 let am
 let pm
-let dates = {
-    "2023": {
-        "4": {
-            "30": ["semi", "hello"]
-        },
-        "5": {
-            "12": ["busy", "hi"],
-            "30": ["semi", "hello"],
-            "7": ["semi", "hello"]
-        }
-    }
-}
+
 let frad
 let msg
 
@@ -107,7 +96,7 @@ let year = dat.getFullYear()
 let m = dat.getMonth() + 1
 const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 let x = 0
-while (x < 13) {
+while (x < 100) {
     cal[x] = { "date": getmonth(new Date(year, m, 0), m, year), "month": m, "year": year }
     if (m == 12) {
         m = 1

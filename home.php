@@ -8,21 +8,42 @@
     <title>Test-avalability</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
+<h1>Test Avalabilitys</h1><br>
 <body>
 
     <div class="task" id="task"></div>
     <div class="side">
+<h1>KEY</h1>
+<div class="today key">Current Day</div>
         <div class="busy key">Fully booked</div>
-        <div class="semi key">semi booked(click for details)</div>
+        <div class="semi key">semi-booked(click on date for details)</div>
         <div class="free key">Free</div>
-        <div class="today key">Current Day</div>
+        
         <h2> <b>! Must Give 24hrs notice before test !</b>
         </h2>
         <h3><u>Site Made By Oliver Crebbin</u></h3>
 
     </div>
-</body>
+</body>	
+
+<script>
+    <?php
+$codes = json_decode(file_get_contents("codes.json"),true); 
+$code = $_GET["code"];
+$go = true;
+function fail(){
+echo 'alert("Incorect Code");window.location.href = "index.html";';
+$go = false;
+}
+set_error_handler("fail");
+$name = $codes[$code];
+
+$dates = file_get_contents("dates.json");
+echo 'let dates = '.$dates;
+
+?>
+
+</script>
 <script src="main.js"></script>
 
 </html>

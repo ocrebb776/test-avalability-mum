@@ -52,12 +52,6 @@ html {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.task {
-    width: 500px;
-    height: 500px;
-    margin: auto;
-}
-
 .top {
     display: grid;
     grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr;
@@ -67,12 +61,43 @@ html {
 }
 
 @media only screen and (min-width: 900px) {
+    .task {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+    }
     body {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
 
+@media only screen and (max-width: 899px) {
+    .task {
+        width: 100vw;
+        height: 100vw;
+        margin: auto;
+    }
+    .side {
+        width: 100vw;
+    }
+}
+
 .side {
     text-align: center;
+    width: 100%;
+}
+
+.side * {
+    width: 100%;
+}
+
+#num,
+#s {
+    width: 50vw;
+    display: block;
+    margin: 20vw;
+    margin: auto;
+    padding: 30px;
+    font-size: 60px;
 }
